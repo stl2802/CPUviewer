@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Системная информация</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background: linear-gradient(to right, #5e35b1, #00b0ff); /* Фиолетово-голубой градиент */
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+             display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh; /* Занимает всю высоту экрана */
+        }
+       .div1 {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+            margin-top: 15%; /* Adjusted margin */
+           padding: 20px;
+             background-color: rgba(255, 255, 255, 0.1); /* полупрозрачный фон */
+            border-radius: 10px; /* Закругленные края */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
+       }
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        p {
+           font-size: 1.5rem;
+             margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+         #system-info-container {
+             text-align: left; /* Выравниваем текст влево */
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+    <h1>Системная информация</h1>
+        <div id="system-info-container">
+          <p>Имя операционной системы: <span id="os-name"></span></p>
+          <p>Модель CPU: <span id="cpu-model"></span></p>
+          <p>Количество оперативной памяти: <span id="ram-total"></span> MB</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='system_info.js') }}"></script>
+</body>
+</html>
